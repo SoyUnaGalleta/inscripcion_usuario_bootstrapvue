@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import PrincipalView from '../views/PrincipalView.vue'
+import NotFound from '../components/NotFoundComponent.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'principal',
+    component: PrincipalView
   },
   {
     path: '/about',
@@ -19,6 +20,11 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
     }
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: 'notfound',
+    component: NotFound
   }
 ]
 
