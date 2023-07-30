@@ -6,10 +6,11 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     users: [
-      {id: 1, name:'Fernanda', age: 28},
-      {id: 2, name:'Felipe', age: 29}
+      {id: 1, name:'Oleg', age: 20},
+      {id: 2, name:'Alex', age: 21},
+      {id: 3, name:'Igor', age: 22}
     ],
-    contadorID: 2 
+    contadorID: 3
   },
   getters: {
   },
